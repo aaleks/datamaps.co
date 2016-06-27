@@ -1,24 +1,9 @@
 import { Map } from 'immutable'
 
-import worldEmptyData, { countryCodes } from '../../data/empty/world'
-import usaEmptyData, { stateCodes } from '../../data/empty/usa'
-import chinaEmptyData, { chinaCodes } from '../../data/empty/china'
-import canadaEmptyData, { canadaCodes } from '../../data/empty/canada'
-
 export default {
   mapType: '',
-  regionCodes: Map({
-    usa: stateCodes,
-    world: countryCodes,
-    china: chinaCodes,
-    canada: canadaCodes,
-  }),
-  regionData: Map({
-    usa: usaEmptyData,
-    world: worldEmptyData,
-    china: chinaEmptyData,
-    canada: canadaEmptyData,
-  }),
+  regionData: Map(),
+  topoData: Map(),
   sortState: Map({ key: 'name', direction: 'ASC' }),
   mapUi: Map({
     title: '',
@@ -38,5 +23,4 @@ export default {
     noDataColor: '#f5f5f5',
     borderColor: '#ccc',
   }),
-  topoData: Map(),
 }
